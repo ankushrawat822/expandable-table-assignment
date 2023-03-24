@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +13,51 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+table ,th , td , tr , tbody ,thead{
+  padding: 8px 18px;
+  border: 2px solid black;
+  border-collapse: collapse;
+  white-space: nowrap
+}
+
+th{
+  cursor: pointer;
+}
+
+
+.container{
+  /* font-size: 23px; */
+  height: 100dvb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+@media only screen and (max-width: 540px) {
+
+
+   table{
+ 
+    display: flex;
+    flex-flow: column;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: none;
+    width : 700px;
+ }
+
+ tbody{
+  border: none;
+ }
+ thead{
+  border : none
+ }
+
+
+ 
 }

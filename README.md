@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+Assignment: Expandable Table
+Your task is to create an expandable table component in React that allows users to compress rows based on a given time period (e.g. month, quarter, year) and view the aggregated data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Requirements:
+1. Your component should accept an array of data objects with properties representing the time period (e.g. month, quarter, year) and other relevant data.
+Example data:
 
-## Available Scripts
+```json
+[
+    { "month": "January", "indicators":[{"name":"revenue","value": 10000},{"name":"expenses","value": 8000}] },
+    { "month": "February",  "indicators":[{"name":"revenue","value": 12000},{"name":"expenses","value": 10000}]  },
+    { "month": "March", "indicators":[{"name":"revenue","value": 9000},{"name":"expenses","value": 7000}]   },
+    { "month": "April", "indicators":[{"name":"revenue","value": 11000},{"name":"expenses","value": 9000}]   },
+    { "month": "May", "indicators":[{"name":"revenue","value": 8000},{"name":"expenses","value": 6000}]   },
+    { "month": "June",  "indicators":[{"name":"revenue","value": 14000},{"name":"expenses","value": 12000}]  }
+]
+```
+2. Your table should display the data in a tabular format with columns representing the time period and relevant data properties.
+Example table:
 
-In the project directory, you can run:
+```yaml
+|	     |January|February|March| April|May  | June  |
+|Revenue | 	10000|	12000 |	9000| 11000|8000 |	14000|
+|Expenses|	8000 |	10000 |	7000| 9000 |6000 |	12000|
+```
+3. Your table should allow users to click on a given time period (e.g. month) to compress the table and display aggregated data (e.g. quarterly or yearly).
 
-### `npm start`
+Example compressed table (by quarter):
+```yaml
+|	     |   Q1  |  Q2    |
+|Revenue | 	31000|	25000 |
+|Expenses|	32000|	27000 |
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. Your table should allow users to click on the compressed data to expand the table back to the original format.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Bonus:
+* Allow users to customize the time period used for compression (e.g. month, quarter, year).
+* Add animations to the expansion and compression of the table.
 
-### `npm test`
+Points considered while scoring.
+1. Mobile responsiveness
+2. Code structure.
+3. Total no. of points covered from the above requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Solve the challenge using react libraries
+1. react-core
+2. chakra-ui (https://chakra-ui.com/getting-started)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Submission:
+Please submit your code as a zip file via email. Your submission should include a README.md file with instructions on how to run your code and any relevant information about your implementation.
